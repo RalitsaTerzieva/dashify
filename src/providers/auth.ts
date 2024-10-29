@@ -14,6 +14,7 @@ export const authCredentials = {
 
 export const authProvider: AuthProvider = {
   login: async ({ email }) => {
+    console.log("IN")
     try {
       const { data } = await dataProvider.custom({
         url: API_URL,
@@ -41,7 +42,7 @@ export const authProvider: AuthProvider = {
       };
     } catch (e) {
       const error = e as Error;
-
+      
       return {
         success: false,
         error: {
