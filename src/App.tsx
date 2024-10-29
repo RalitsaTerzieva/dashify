@@ -19,6 +19,7 @@ import routerBindings, {
 } from "@refinedev/react-router-v6";
 import { App as AntdApp } from "antd";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { Home, ForgotPassword, Login, Register } from './pages';
 
 import {
   BlogPostCreate,
@@ -32,9 +33,6 @@ import {
   CategoryList,
   CategoryShow,
 } from "./pages/categories";
-import { ForgotPassword } from "./pages/forgotPassword";
-import { Login } from "./pages/login";
-import { Register } from "./pages/register";
 
 
 function App() {
@@ -95,6 +93,7 @@ function App() {
                       </Authenticated>
                     }
                   >
+                    <Route index element={<Home />}/>
                     <Route
                       index
                       element={<NavigateToResource resource="blog_posts" />}
