@@ -10,7 +10,7 @@ import {
 } from "@refinedev/antd";
 import "@refinedev/antd/dist/reset.css";
 
-import { dataProvider, liveProvider } from "./providers";
+import { dataProvider, liveProvider, authProvider } from "./providers";
 import routerBindings, {
   CatchAllNavigate,
   DocumentTitleHandler,
@@ -49,6 +49,7 @@ function App() {
                 liveProvider={liveProvider}
                 notificationProvider={useNotificationProvider}
                 routerProvider={routerBindings}
+                authProvider={authProvider}
                 resources={[
                   {
                     name: "blog_posts",
